@@ -6,18 +6,26 @@ As a co-founder of Rulerr.com and being passionate about Machine Learning, I fel
 
 This document outlines the design of a machine learning algorithm with the end goal of helping an organization manage the access privileges for their staff or customers.
 
+Access Privileges tell you much more about an organization than you would expect, this extra information is especially useful for Managers and Executives. Spoiler Alert, Access Privileges tells you:
+
+1. How an organization is structured hierarchically based on the sensitivity of information each person has access to.
+	a. It often comes as a shock to most Managers and Executives, that they are very low down on the "totem pole" (so to speak) in comparison to other employees when it comes to access to information.
+	b. On a positive note, the data gives Managers and Executives visibility on who can effect change within an organization because they can actively see who knows the organization the best.
+2. How risky each person is in the organization
+	a. This helps organizations target specific users for training on best security practices.
+
 ## Input Data
 
-To create an algorithm for access privileges, we must first consider what data would be most readily available:
+To create an algorithm for access privileges, we must first consider what data would be most readily available and build upon that data over time:
 
 1. Information about each entity (for example a person) in the organization
 2. Access privileges for each piece of software/hardware/building etc
 
-The quality of the information provided to the model will increase the available information it can provide the user.
+The quality of the information provided to the model will increase the available information it can provide the organization.
 
-Many organizations can have hundreds, if not thousands of separate access privilege systems that are not integrated or validated against other internal systems. Considering this, the model should provide high value information using the least amount of information possible.
+Many organizations have hundreds, if not thousands of separate access privilege systems that are not integrated or validated against other internal systems. Considering this, the model should provide high value information using the least amount of information possible.
 
-The model should be able to consider more complex information (to the point of ideal) as it becomes available.
+The model(s) should be able to consider more complex information (to the point of ideal) as that information becomes available.
 
 ### Information required for the model
 
