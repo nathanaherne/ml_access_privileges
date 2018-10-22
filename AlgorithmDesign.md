@@ -1,4 +1,4 @@
-As a co-founder of Rulerr.com and being passionate about Machine Learning, I felt that making a machine learning algorithm available on Github may help those organizations who are unable to use an external party to look for anomalies in their Access Privileges.
+As a co-founder of Rulerr.com and being passionate about Machine Learning, I felt that making a machine learning algorithm available on Github may help those organizations who are unable to use an external organization like Rulerr to look for anomalies in their Access Privileges.
 
 **Current Status of this document** -> very much a dump of my thoughts.
 
