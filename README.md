@@ -1,13 +1,22 @@
-# Background
-As a co-founder of Rulerr.com and being passionate about Machine Learning, I wanted to document a machine learning algorithm to manage Access Privileges available on Github. I felt it may help those organizations who are unable to use an external organization like Rulerr to look for anomalies and manage their Access Privileges.
+**Current Status of this repository** -> an initial dump of my thoughts
 
-**Current Status of this repository** -> a initial dump of my thoughts
+# Background
+As a co-founder of [Rulerr.com](www.rulerr.com) and being passionate about deep learning, I wanted to document a deep learning algorithm to manage Access Privileges available on [Github](github.com). I felt it may help those organizations who are unable to use an external organization like [Rulerr](rulerr.com) to look for anomalies and manage their Access Privileges.
+
+# Using this in your organization
+
+Deep learning models sometimes need to be tweaked to suit a particular organization's data or business model. When discussing the data and creating the deep learning model, I will try to make it obvious as to how you could tweak the model to fit your particular use case. Alternatively, if you would like me to help tweak the model to fit your organization's requirements, please contact me.
+
+# Audience
+
+My usual role is being the conduit between complex technology and executive decision makers.
 
 # Introduction
 
-This document outlines the design of a machine learning algorithm with the end goal of helping an organization manage the access privileges for their staff or customers.
+This document outlines the design of a deep learning algorithm with the end goal of helping organizations manage access privileges effectively.
 
-Access Privileges tell you much more about an organization than you would expect, this extra information is especially useful for Managers and Executives. Spoiler Alert, Access Privileges tells you:
+## Bonus information
+Access Privileges tell you much more about an organization than initially expected, this extra information is especially useful for Managers and Executives. Analyzing access privileges tells you:
 
 1. How an organization is structured hierarchically based on the sensitivity of information each person has access to.
 	a. It often comes as a shock to most Managers and Executives, that they are very low down on the "totem pole" (so to speak) in comparison to other employees when it comes to access to information.
@@ -15,9 +24,17 @@ Access Privileges tell you much more about an organization than you would expect
 2. How risky each person is in the organization
 	a. This helps organizations target specific users for training on best security practices.
 
-# Breakdown of Data
+# Data Analysis
 
-A machine learning algorithm is only as good as the data you feed it. If you do not understand the data, the algorithm will not understand the data and your algorithm will probably be useless.
+The data you feed a deep learning algorithm is extremely important because a deep learning algorithm learns from the data you feed it. If you do not understand the data, misinterpret what the data is telling you, feed the algorithm incorrect data or miss important correlations, the algorithm will not be particularly useful. This is the main reason why most deep learning experts spend 75% of their time on the data.
+
+With this in mind, we will be considering the available data first and then move onto creating a deep learning model to help manage access privileges.
+
+## Data Correlations
+
+To create a good deep learning model, we need to find quality correlations and quality is important. I am sure you have heard the saying "correlation doesn't equal causation", the saying exists because it is very important to understand why one event is related to another. A real world example is the stock price of [Berkshire Hathaway](berkshirehathaway.com) increases when a movie starring Anne Hathaway is released. If you wanted to use a deep learning algorithm to predict the stock price of Berkshire Hathaway, then it would be a good idea if the deep learning algorithm considered her upcoming movie releases. In saying this, there is no logical reasoning why movies starring a certain person should effect the stock price of a business. Alternatively, this correlation does show you the value of looking for all sorts of correlations in your available data, even seemingly unrelated correlations.
+
+## Overview of data
 
 To create an algorithm for access privileges, we must first consider what data would be most readily available and build upon that data over time:
 
@@ -55,7 +72,7 @@ The entity information might be as follows:
 9. Their home address (or at least the city/suburb/zip/country)
 10. employment status
 
-BTW: I call it "entity information" instead of "people information" because many organizations have many computer systems, machine learning algorithms and computer programs that can access many different systems within the organization. 
+BTW: I call it "entity information" instead of "people information" because many organizations have many computer systems, deep learning algorithms and computer programs that can access many different systems within the organization. 
 
 When collating entity information, you can choose to only use real people and discard any accounts that cannot be attached to actual people. Doing this would produce an incomplete model but it may make things simpler to start with.
 
