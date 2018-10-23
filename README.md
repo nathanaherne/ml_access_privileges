@@ -1,6 +1,7 @@
-As a co-founder of Rulerr.com and being passionate about Machine Learning, I felt that making a machine learning algorithm available on Github may help those organizations who are unable to use an external organization like Rulerr to look for anomalies in their Access Privileges.
+# Background
+As a co-founder of Rulerr.com and being passionate about Machine Learning, I wanted to document a machine learning algorithm to manage Access Privileges available on Github. I felt it may help those organizations who are unable to use an external organization like Rulerr to look for anomalies and manage their Access Privileges.
 
-**Current Status of this document** -> very much a dump of my thoughts.
+**Current Status of this repository** -> a initial dump of my thoughts
 
 # Introduction
 
@@ -14,7 +15,9 @@ Access Privileges tell you much more about an organization than you would expect
 2. How risky each person is in the organization
 	a. This helps organizations target specific users for training on best security practices.
 
-## Input Data
+# Breakdown of Data
+
+A machine learning algorithm is only as good as the data you feed it. If you do not understand the data, the algorithm will not understand the data and your algorithm will probably be useless.
 
 To create an algorithm for access privileges, we must first consider what data would be most readily available and build upon that data over time:
 
@@ -27,7 +30,7 @@ Many organizations have hundreds, if not thousands of separate access privilege 
 
 The model(s) should be able to consider more complex information (to the point of ideal) as that information becomes available.
 
-### Information required for the model
+## Information required for the model
 
 **Minimum Possible**
 
@@ -64,13 +67,13 @@ Entity information and Access Privilege information are almost always separate p
 
 It makes sense that each account in a piece of software/building/hardware etc is attached to an entity or you do not know who has access to what. If your organization does not match accounts to entities, over time you will want to match all usernames with entities within the organization.
 
-# Considering the data
+## Considering the data
 
-To create a good model, we need to understand what the model might be able to infer from the data you can feed it. Remember that computers cannot understand context, so context needs to be inferred from the data itself without outside influence.
+To create a good model, we need to understand what the model might be able to infer from the data you feed it. Remember that computers do not understand context, so context needs to be inferred from the data you feed it.
 
-## Access Privilege data
+### Access Privilege data
 
-To help us understand what access privilege data might infer to the model, I will be using an analogy because I find it easier to understand access privileges when it is attached to a simple real world example.
+To help us understand what access privilege data might infer to the model, I will be using an analogy because I find it easier to explain access privileges when it is attached to a simple real world example.
 
 I will be using Building Access (a house in this case) to help create a model of what access privilege data can infer.
 
