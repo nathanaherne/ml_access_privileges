@@ -1,40 +1,43 @@
-**Current Status of this repository** -> an initial dump of my thoughts
+**Current Status of this repository** -> a work in progress
 
-# Background
+## Background
 As a co-founder of [Rulerr.com](www.rulerr.com) and being passionate about deep learning, I wanted to document a deep learning algorithm to manage Access Privileges available on [Github](github.com). I felt it may help those organizations who are unable to use an external organization like [Rulerr](rulerr.com) to look for anomalies and manage their Access Privileges.
 
-# Using this in your organization
+## Using this in your organization
 
 Deep learning models sometimes need to be tweaked to suit a particular organization's data or business model. When discussing the data and creating the deep learning model, I will try to make it obvious as to how you could tweak the model to fit your particular use case. Alternatively, if you would like me to help tweak the model to fit your organization's requirements, please contact me.
 
-# Audience
+## Audience
 
-My usual role is being the conduit between complex technology and executive decision makers.
+I am usually the person who explains technical things to executive level, non technical people. I will be coming at it from this perspective.
 
-# Introduction
+## Introduction
 
 This document outlines the design of a deep learning algorithm with the end goal of helping organizations manage access privileges effectively.
 
-## Bonus information
-Access Privileges tell you much more about an organization than initially expected, this extra information is especially useful for Managers and Executives. Analyzing access privileges tells you:
+### Bonus information
+
+When creating these sorts of algorithms, there is usually some bonus insights the organization gets as a byproduct.
+
+Access Privileges tell you much more about an organization than who has access to what, deeply analyzing access privileges tells you:
 
 1. How an organization is structured hierarchically based on the sensitivity of information each person has access to.
-	a. It often comes as a shock to most Managers and Executives, that they are very low down on the "totem pole" (so to speak) in comparison to other employees when it comes to access to information.
+	a. It often comes as a shock to most Managers and Executives, that they are low down on the "totem pole" (so to speak) in comparison to other employees when it comes to access to sensitive information.
 	b. On a positive note, the data gives Managers and Executives visibility on who can effect change within an organization because they can actively see who knows the organization the best.
 2. How risky each person is in the organization
 	a. This helps organizations target specific users for training on best security practices.
 
-# Data Analysis
+## Data Analysis
 
-The data you feed a deep learning algorithm is extremely important because a deep learning algorithm learns from the data you feed it. If you do not understand the data, misinterpret what the data is telling you, feed the algorithm incorrect data or miss important correlations, the algorithm will not be particularly useful. This is the main reason why most deep learning experts spend 75% of their time on the data.
+A deep learning algorithm learns from the data you feed it. If you do not understand the data, misinterpret what the data is telling you, feed the algorithm incorrect data or miss important correlations, the algorithm will not be particularly useful. This is the main reason why most deep learning experts spend 75% of their time on the data.
 
 With this in mind, we will be considering the available data first and then move onto creating a deep learning model to help manage access privileges.
 
-## Data Correlations
+### Data Correlations
 
 To create a good deep learning model, we need to find quality correlations and quality is important. I am sure you have heard the saying "correlation doesn't equal causation", the saying exists because it is very important to understand why one event is related to another. A real world example is the stock price of [Berkshire Hathaway](berkshirehathaway.com) increases when a movie starring Anne Hathaway is released. If you wanted to use a deep learning algorithm to predict the stock price of Berkshire Hathaway, then it would be a good idea if the deep learning algorithm considered her upcoming movie releases. In saying this, there is no logical reasoning why movies starring a certain person should effect the stock price of a business. Alternatively, this correlation does show you the value of looking for all sorts of correlations in your available data, even seemingly unrelated correlations.
 
-## Overview of data
+### Overview of data
 
 To create an algorithm for access privileges, we must first consider what data would be most readily available and build upon that data over time:
 
@@ -47,7 +50,7 @@ Many organizations have hundreds, if not thousands of separate access privilege 
 
 The model(s) should be able to consider more complex information (to the point of ideal) as that information becomes available.
 
-## Information required for the model
+### Information required for the model
 
 **Minimum Possible**
 
@@ -84,11 +87,11 @@ Entity information and Access Privilege information are almost always separate p
 
 It makes sense that each account in a piece of software/building/hardware etc is attached to an entity or you do not know who has access to what. If your organization does not match accounts to entities, over time you will want to match all usernames with entities within the organization.
 
-## Considering the data
+### Considering the data
 
 To create a good model, we need to understand what the model might be able to infer from the data you feed it. Remember that computers do not understand context, so context needs to be inferred from the data you feed it.
 
-### Access Privilege data
+#### Access Privilege data
 
 To help us understand what access privilege data might infer to the model, I will be using an analogy because I find it easier to explain access privileges when it is attached to a simple real world example.
 
@@ -147,7 +150,7 @@ We can infer a certain amount of knowledge from access:
 If 
 
 
-# Training the Model
+## Training the Model
 
 To train the model we need to consider how the data can be used by the model to find anomalies in your access privilege information and in time be able to help manage your organizations access privileges.
 
@@ -160,7 +163,7 @@ What is correct:
 2. All accounts within a piece of software, should be attached to an entity.
 4. People who are no longer employed by your organization should not have access to any systems.
 
-# Training
+## Training
 
 Most organizations would have some incorrect permissions. Teaching the model based on existing permissions and treating them as correct would not produce the desirable outcome. Before training the model, we would need to normalise the input data to remove permissions that do not fit these particular rules. To train the model, we would need to attach accounts with people. Those accounts that were not attached to people would be flagged as incorrect.
 
